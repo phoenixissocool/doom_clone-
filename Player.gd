@@ -3,10 +3,10 @@ extends KinematicBody
 # Walking variables.
 # This manages how fast we are moving, fast we can walk,
 # how quickly we can get to top speed, how strong gravity is, and how high we jump.
-const GRAVITY = -24.8
+const GRAVITY = -60
 var vel = Vector3()
-const MAX_SPEED = 20
-const JUMP_SPEED = 18
+const MAX_SPEED = 50
+const JUMP_SPEED = 30
 const ACCEL= 4.5
 
 # A vector for storing the direction the player intends to move towards.
@@ -14,14 +14,15 @@ var dir = Vector3()
 
 # Sprinting variables. Similar to the varibles above for walking,
 # but these are used when sprinting (so they should be faster/higher)
-const MAX_SPRINT_SPEED = 30
+const MAX_SPRINT_SPEED = 80
 const SPRINT_ACCEL = 18
 # A boolean to track if we are spriting
 var is_sprinting = false
 
 # How fast we slow down, and the steepest angle that counts as a floor (to the KinematicBody).
 const DEACCEL= 16
-const MAX_SLOPE_ANGLE = 40
+const MAX_SLOPE_ANGLE = 150
+
 
 # The camera and the rotation helper.
 # We need the camera to get its directional vectors.

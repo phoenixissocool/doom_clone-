@@ -71,6 +71,9 @@ margin_top = -4.0
 margin_right = -3.0
 margin_bottom = -4.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 testing_area_scene = "res://Testing_Area.tscn"
 space_level_scene = "res://assets/Space_Level_Objects/Space_Level.tscn"
 ruins_level_scene = "res://assets/Ruin_Level_Objects/Ruins_Level.tscn"

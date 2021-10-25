@@ -420,3 +420,6 @@ width = 0.203
 height = 57.192
 depth = 1008.0
 material = ExtResource( 8 )
+
+[node name="CSGBox3" type="CSGBox" parent="big old house"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4634, 2.22612, 503.714 )
