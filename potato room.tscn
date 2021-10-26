@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/brickOrange/ORANGE_BRICK_SPEC.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://assets/brickOrange/ORANGE_BRICK_DISP.png" type="Texture" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 1 )
@@ -53,8 +54,16 @@ adjustment_enabled = true
 albedo_texture = ExtResource( 1 )
 uv1_scale = Vector3( 25, 5, 20 )
 
+[sub_resource type="SpatialMaterial" id=10]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 5, 5, 1 )
+
 [sub_resource type="SpatialMaterial" id=9]
 albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 4 )
+uv1_scale = Vector3( 5, 5, 1 )
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000631332, 9.53674e-07, -0.0241222 )
@@ -126,6 +135,28 @@ width = 159.849
 height = 60.0
 depth = 0.002
 material = SubResource( 8 )
+
+[node name="CSGBox3" type="CSGBox" parent="trane stuff/walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -158.256, 22.2214, 280.907 )
+use_collision = true
+width = 245.063
+height = 60.0
+depth = 0.002
+material = SubResource( 8 )
+
+[node name="CSGBox4" type="CSGBox" parent="trane stuff/walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -274.268, 27.9876, 248.445 )
+width = 0.001
+height = 57.193
+depth = 64.31
+material = SubResource( 10 )
+
+[node name="CSGBox5" type="CSGBox" parent="trane stuff/walls"]
+transform = Transform( 0.0147125, 0, -0.999892, 0, 1, 0, 0.999892, 0, 0.0147125, -311.236, 27.9876, 216.654 )
+width = 0.001
+height = 57.193
+depth = 74.154
+material = SubResource( 10 )
 
 [node name="rocks and rubble " type="Spatial" parent="trane stuff"]
 
@@ -216,3 +247,12 @@ width = 5.0
 height = 5.0
 depth = 5.0
 material = SubResource( 9 )
+
+[node name="fake walls " type="Spatial" parent="trane stuff"]
+
+[node name="CSGBox" type="CSGBox" parent="trane stuff/fake walls "]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -310.382, 24.9941, 280.898 )
+width = 65.403
+height = 49.0409
+depth = 0.001
+material = SubResource( 11 )
