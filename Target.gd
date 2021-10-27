@@ -14,7 +14,7 @@ var broken_target_holder
 var target_collision_shape
 
 # The amount of time (in seconds) it takes for a target to respawn
-const TARGET_RESPAWN_TIME = 14
+const TARGET_RESPAWN_TIME = 999999999
 # A variable for tracking how long a target has been broken
 var target_respawn_timer = 0
 

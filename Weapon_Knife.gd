@@ -7,7 +7,7 @@ var spare_ammo = 1
 const AMMO_IN_MAG = 1
 
 # How much damage does this weapon do
-const DAMAGE = 40
+const DAMAGE = 50000
 
 # Can this weapon reload?
 const CAN_RELOAD = false
